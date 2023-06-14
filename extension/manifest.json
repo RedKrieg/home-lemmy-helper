@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Lemmy Home Instance Helper",
+  "version": "0.1",
+  "description": "Adds a 'Subscribe' link to Lemmy communities on servers where you are not logged in.",
+  "permissions": ["tabs", "contextMenus", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["options.js"],
+      "matches": ["chrome-extension://*/*"]
+    }
+  ],
+  "icons": {
+      "32": "glider32.png",
+      "128": "glider128.png"
+  }
+}

@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Lemmy Home Instance Helper",
-  "version": "0.1",
-  "description": "Adds a 'Subscribe' link to Lemmy communities on servers where you are not logged in.",
-  "permissions": ["tabs", "contextMenus", "storage"],
+  "version": "0.1.0",
+  "description": "Adds a 'Search' link to Lemmy communities on servers where you are not logged in.",
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": ["*://*/*"],

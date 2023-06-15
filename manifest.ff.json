@@ -10,7 +10,7 @@
   },
   "content_scripts": [
     {
-      "js": ["src/js/content.js"],
+      "js": ["src/js/lemmy-home-helper.js"],
       "matches": ["*://*/*"],
       "run_at": "document_end"
     }

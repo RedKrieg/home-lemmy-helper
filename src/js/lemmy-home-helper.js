@@ -5,7 +5,7 @@ function addElements() {
     'a.nav-link[href="https://join-lemmy.org"]'
   );
   const createPostLink = document.querySelector(
-    'a.btn.btn-secondary.btn-block.mb-2[href^="/create_post?community_id="]'
+    'div.card > div.card-body > a.btn.btn-secondary.btn-block.mb-2[href^="/create_post?community"]'
   );
   const existingSubscribeLink = document.querySelector('#homeLemmyLink');
   const communityLink = document.querySelector(

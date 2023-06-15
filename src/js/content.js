@@ -8,19 +8,21 @@ function addElements() {
     'a.btn.btn-secondary.btn-block.mb-2[href^="/create_post?community_id="]'
   );
   const existingSubscribeLink = document.querySelector('#homeLemmyLink');
+  const communityLink = document.querySelector(
+    'div.card > div.card-body > div > a.text-muted[href^="/c/"][title^="!"][rel="noopener nofollow"]'
+  );
 
-  if (loginLink && joinLink && createPostLink && !existingSubscribeLink) {
-    // Extract current server and community name from the URL
-    const currentURL = window.location.href;
-    const regexResult = currentURL.match(/https?:\/\/([^/]+)\/c\/([^/]+)/);
-    if (!regexResult) {
+  if (loginLink && joinLink && createPostLink && communityLink && !existingSubscribeLink) {
+    // Extract current server and community name from the community link
+    const communityResult = communityLink.href.match(/https?:\/\/([^/]+)\/c\/([^/@]+)/);
+    if (!communityResult) {
       console.error(
-        'Unable to extract current server and community name from URL.'
+        'Unable to extract community from sidebar link.'
       );
       return;
     }
-    const currentServer = regexResult[1];
-    const communityName = regexResult[2];
+    const currentServer = communityResult[1];
+    const communityName = communityResult[2];
 
     // Get home server URL from extension options
     chrome.storage.sync.get({ homeServer: 'lemmy.world' }, function (result) {

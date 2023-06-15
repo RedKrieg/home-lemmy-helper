@@ -19,7 +19,7 @@
   "name": "Lemmy Home Instance Helper",
   "options_page": "src/html/options.html",
   "permissions": ["storage"],
-  "version": "0.2.0",
+  "version": "VERSION_STRING",
   "web_accessible_resources": [
     {
       "matches": ["chrome-extension://*/*"],

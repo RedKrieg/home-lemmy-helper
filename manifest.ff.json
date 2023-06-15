@@ -27,6 +27,6 @@
     "page": "src/html/options.html"
   },
   "permissions": ["storage"],
-  "version": "0.2.0",
+  "version": "VERSION_STRING",
   "web_accessible_resources": ["src/js/options.js"]
 }

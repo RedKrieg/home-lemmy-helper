@@ -1,6 +1,3 @@
-const isFirefox = () =>
-  navigator.userAgent.toLowerCase().indexOf('firefox') !== -1;
-
 function addElements() {
   // Check if the required elements exist on the page
   const loginLink = document.querySelector('a.nav-link[title="Login"]');

@@ -1,6 +1,3 @@
-const isFirefox = () =>
-  navigator.userAgent.toLowerCase().indexOf('firefox') !== -1;
-
 // options.js
 document.addEventListener('DOMContentLoaded', function () {
   var optionsForm = document.getElementById('optionsForm');

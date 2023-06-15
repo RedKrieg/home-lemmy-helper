@@ -1,0 +1,29 @@
+{
+  "action": {
+    "default_icon": "icons/glider32.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["src/js/content.js"],
+      "matches": ["*://*/*"],
+      "run_at": "document_end"
+    }
+  ],
+  "default_locale": "en",
+  "description": "Adds a 'Search' link to Lemmy communities on servers where you are not logged in.",
+  "icons": {
+    "128": "icons/glider128.png",
+    "32": "icons/glider32.png"
+  },
+  "manifest_version": 3,
+  "name": "Lemmy Home Instance Helper",
+  "options_page": "src/html/options.html",
+  "permissions": ["storage"],
+  "version": "0.2.0",
+  "web_accessible_resources": [
+    {
+      "matches": ["chrome-extension://*/*"],
+      "resources": ["src/js/options.js"]
+    }
+  ]
+}

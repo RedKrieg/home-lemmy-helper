@@ -1,0 +1,32 @@
+{
+  "browser_action": {
+    "default_icon": "icons/glider32.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "home-lemmy-helper@redkrieg.github.com",
+      "strict_min_version": "55.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": ["src/js/content.js"],
+      "matches": ["*://*/*"],
+      "run_at": "document_end"
+    }
+  ],
+  "default_locale": "en",
+  "description": "Adds a 'Search' link to Lemmy communities on servers where you are not logged in.",
+  "icons": {
+    "128": "icons/glider128.png",
+    "32": "icons/glider32.png"
+  },
+  "manifest_version": 2,
+  "name": "Lemmy Home Instance Helper",
+  "options_ui": {
+    "page": "src/html/options.html"
+  },
+  "permissions": ["storage"],
+  "version": "0.2.0",
+  "web_accessible_resources": ["src/js/options.js"]
+}
